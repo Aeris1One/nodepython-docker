@@ -1,6 +1,6 @@
 FROM --platform=$TARGETOS/$TARGETARCH python:3.11-alpine
 
-RUN         apk add --update --no-cache cmake make ca-certificates curl ffmpeg g++ gcc git openssl sqlite tar tzdata nodejs \
+RUN         apk add --update --no-cache cmake make ca-certificates curl ffmpeg g++ gcc git openssl sqlite tar tzdata nodejs nodejs-npm \
 	&& adduser -D -h /home/container container
 
 USER        container
